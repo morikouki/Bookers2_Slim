@@ -1,2 +1,6 @@
 div.row
-	p show_userページ
+	div.col-xs-3
+		= render 'users/profile', user: current_user
+
+
+	div.col-xs-9
