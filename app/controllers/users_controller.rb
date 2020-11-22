@@ -8,9 +8,11 @@ class UsersController < ApplicationController
 
 	def show
 		@new_book = Book.new
+		@books = current_user.books
 	end
 
 	def edit
+		
 	end
 
 	def update

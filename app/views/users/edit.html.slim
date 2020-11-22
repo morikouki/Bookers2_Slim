@@ -1,0 +1,7 @@
+div.row
+	h2 User info
+	= form_with model: current_user, url: user_path(current_user) do |f|
+		= f.label :name
+		= f.text_field :name
+		<br>
+		= f.label
