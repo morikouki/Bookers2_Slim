@@ -1,9 +1,7 @@
 h2 User info
 
 table.table
-	tr
-		th
-		td
+	= attachment_image_tag user, :profile_image, fallback: 'noimage.jpg', size: '100x100'
 	tr
 		th Name
 		td =user.name

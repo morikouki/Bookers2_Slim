@@ -1,0 +1,19 @@
+div.row
+	div.col-xs-3
+		= render 'users/profile', user: current_user
+		= render 'books/new', book: @new_book
+
+	div.col-xs-9
+		h2 Books
+		table.table
+			thead
+				tr
+					th
+					th Title
+					th Opinion
+			tbody
+				- @books.each do |book|
+					tr
+						td = attachment_image_tag book.user, :profile_image, fallback: 'noimage.jpg', size: '50x50'
+						td = book.title
+						td = book.body
